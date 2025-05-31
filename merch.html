@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<style>
+   body {
+      overflow-x: hidden;
+      background-color: black;
+   }
+
+   .title2 {
+      font-family: Gustavo, sans-serif;
+      font-weight: 550;
+      font-size: 60px;
+      line-height: 1px;
+   }
+
+   .sticky {
+      background-color: rgb(255, 255, 255);
+      position: sticky;
+      top: 0px;
+      padding: 10px 0px;
+      padding-left: 50px;
+   }
+
+   .container {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+   }
+
+   .box {
+      max-width: 400px;
+   }
+</style>
+<div class="sticky">
+   <br>
+
+   <img id="search" style="margin-left: 80%;"
+      src="https://gear.koenigsegg.com/wp-content/themes/koenigsegg/assets/icons/header/search_icon.svg" height="21px">
+   <img style="margin-left: 60px;"
+      src="https://gear.koenigsegg.com/wp-content/themes/koenigsegg/assets/icons/header/user_icon.svg" height="21px">
+   <select id="currency" style="border: 0; margin-left: 40px;" onchange="updatePrice()">
+      <option value="USD">USD</option>
+      <option value="INR">INR</option>
+   </select>
+</div><br>
+</div>
+
+
+
+<div style="padding-left: 130px;">
+   <div class="box">
+      <img
+         src="https://www.aljazeera.com/wp-content/uploads/2019/11/afd5f7e3129c4064a394729b5f1b5bb4_18.jpeg?resize=770%2C513&quality=80"
+         width="500px" height="340px" style="margin-top: 40px; margin-left: 40px;">
+      <p id="product1"
+         style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-left: 40px;color: white"
+         ;>Mona lisa (Replica)<br>$1200</p>
+   </div>
+   <div style="margin-left: 50%; margin-top: -415px;">
+      <img src="https://live.staticflickr.com/1001/562372044_c80a7c3069_b.jpg" width="500px" height="340px">
+      <div>
+         <p id="product2"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top: 20px;margin-left: 0px;color: white"
+            ;>Starry Night (Replica)<br>$470</p>
+      </div>
+   </div>
+   <div class="box">
+      <img src="https://i.pinimg.com/originals/ec/78/3e/ec783e18b4b2d841978b32e34d29f327.jpg" width="500px"
+         height="340px" style="margin-top: 40px; margin-left: 40px;">
+      <p id="product3"
+         style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-left: 40px;color: white"
+         ;>Guernica (Replica)<br>$459</p>
+   </div>
+   <div style="margin-left: 50%; margin-top: -415px;">
+      <img src="https://news.artnet.com/app/news-upload/2021/11/GettyImages-450943238-1024x697.jpg" width="500px"
+         height="340px">
+      <div>
+         <p id="product4"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top: 20px;margin-left: 0px;color: white"
+            ;>Girl with a Pearl Earring (Replica)<br>$234</p>
+      </div>
+   </div>
+   <div class="box">
+      <img src="https://www.belvedere.at/sites/default/files/jart-images/_517470651538.jpg" width="500px" height="340px"
+         style="margin-top: 40px; margin-left: 40px;">
+      <p id="product5"
+         style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-left: 40px;color: white"
+         ;>The Kiss (Replica)<br>$723</p>
+   </div>
+   <div style="margin-left: 50%; margin-top: -415px;">
+      <img
+         src="https://media.cnn.com/api/v1/images/stellar/prod/151231034106-edvard-munch-the-scream.jpg?q=w_3000,h_2000,x_0,y_0,c_fill"
+         width="500px" height="340px">
+      <div>
+         <p id="product6"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top: 20px;margin-left: 0px;color: white"
+            ;>The Scream (Replica) <br>$934</p>
+      </div>
+   </div>
+</div><br>
+
+
+
+</html>
+
+<script>
+   function updatePrice() {
+      var currencySelect = document.getElementById("currency");
+      var product1Price = document.getElementById("product1");
+      var product2Price = document.getElementById("product2");
+      var product3Price = document.getElementById("product3");
+      var product4Price = document.getElementById("product4");
+      var product5Price = document.getElementById("product5");
+      var product6Price = document.getElementById("product6");
+
+      if (currencySelect.value === "USD") {
+         product1Price.innerText = "Mona Lisa (Replica)\n$1200K";
+         product2Price.innerText = "Starry Night\n$470";
+         product3Price.innerText = "Guernica\n$459";
+         product4Price.innerText = "Girl with a Pearl Earring\n$234";
+         product5Price.innerText = "The Kiss\n$732";
+         product6Price.innerText = "The Scream\n$934";
+      } else if (currencySelect.value === "INR") {
+         product1Price.innerText = "Mona Lisa (Replica)\n₹99138";
+         product2Price.innerText = "Starry Night\n₹38829";
+         product3Price.innerText = "Guernica\n$37920";
+         product4Price.innerText = "Girl with a Pearl Earring\n$19332";
+         product5Price.innerText = "The Kiss\n$60474";
+         product6Price.innerText = "The Scream\n$77162";
+      }
+   }
+   function handleSearch() {
+      var searchTerm = prompt("Enter your search query:");
+      if (searchTerm === "Guernica") {
+         var element = document.getElementById("product1");
+         element.scrollIntoView({ behavior: "smooth" });
+      } else if (searchTerm === "The Kiss") {
+         var element = document.getElementById("product3");
+         element.scrollIntoView({ behavior: "smooth" });
+      }
+   }
+
+   // Add click event listener to the search icon image
+   var searchImage = document.getElementById("search");
+   searchImage.addEventListener("click", handleSearch);
+</script>

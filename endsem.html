@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Galleria</title>
+  <link rel="stylesheet" href="endsem.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    .card {
+
+      margin-left: 25px;
+      margin-right: 25px;
+      width: 320px;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 8px solid white;
+      position: relative;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      color: rgb(255, 255, 255);
+      object-fit: cover;
+      border-radius: 15px;
+      opacity: 1;
+    }
+
+    .card-body {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      background-color: darkgrey;
+      backdrop-filter: blur(5px);
+      border-radius: 5px;
+      color: black;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 2s;
+      opacity: 0.7;
+    }
+
+    .card1-body {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      background-color: lightgoldenrodyellow;
+      backdrop-filter: blur(15px);
+      border-radius: 5px;
+      color: rgb(255, 255, 255);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 2s;
+      opacity: 0.7;
+    }
+
+    .card2-body {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      background-color: lightgrey;
+      backdrop-filter: blur(15px);
+      border-radius: 5px;
+      padding: 30px;
+      display: flex;
+      color: rgb(255, 255, 255);
+      flex-direction: column;
+      justify-content: center;
+      transition: 2s;
+      opacity: 0.7;
+    }
+
+    .card3-body {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      background-color: lightgoldenrodyellow;
+      backdrop-filter: blur(15px);
+      border-radius: 5px;
+      color: rgb(255, 255, 255);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 2s;
+      opacity: 0.7;
+    }
+
+    .card:hover .card-body {
+      right: 0;
+    }
+
+    .card:hover .card1-body {
+      right: 0;
+    }
+
+    .card:hover .card2-body {
+      right: 0;
+    }
+
+    .card:hover .card3-body {
+      right: 0;
+    }
+
+    .card-title {
+      overflow: hidden;
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 500;
+      color: black;
+      background-color: darkgrey;
+    }
+
+    .card-sub-title {
+      overflow: hidden;
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 300;
+      color: black;
+      background-color: darkgrey;
+    }
+
+    .card-info {
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 25px;
+      margin: 40px 0;
+      font-weight: 400;
+      color: black;
+      background-color: darkgrey;
+    }
+
+    .card1-title {
+      overflow: hidden;
+      text-transform: uppercase;
+      color: black;
+      background-color: lightgoldenrodyellow;
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .card1-sub-title {
+      overflow: hidden;
+      text-transform: capitalize;
+      color: black;
+      background-color: lightgoldenrodyellow;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .card1-info {
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 25px;
+      color: black;
+      background-color: lightgoldenrodyellow;
+      margin: 40px 0;
+      font-weight: 400;
+      background-color: white;
+    }
+
+    .card2-title {
+      overflow: hidden;
+      text-transform: uppercase;
+      color: black;
+      background-color: lightgrey;
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .card2-sub-title {
+      overflow: hidden;
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 300;
+      color: black;
+      background-color: lightgrey;
+    }
+
+    .card2-info {
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 25px;
+      margin: 40px 0;
+      font-weight: 400;
+      background-color: white;
+      color: black;
+      background-color: lightgrey;
+    }
+
+    .card3-title {
+      overflow: hidden;
+      text-transform: uppercase;
+      color: black;
+      background-color: lightgoldenrodyellow;
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .card3-sub-title {
+      overflow: hidden;
+      text-transform: capitalize;
+      color: black;
+      background-color: lightgoldenrodyellow;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .card3-info {
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 25px;
+      color: black;
+      background-color: lightgoldenrodyellow;
+      margin: 40px 0;
+      font-weight: 400;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <section class="page">
+
+    <div class="nav">
+      <ul>
+        <a href="#rendu">
+          <li class="li" style="font-family:Italiana;">Creators</li>
+        </a>
+        <a target="#" href="./artmuseums.html">
+          <li style="font-family:Italiana;">Museums</li>
+        </a>
+        <a target="#" href="merch.html">
+          <li style="font-family:Italiana;">Merch</li>
+        </a>
+        <a target="#" href="./arts_contact.html">
+          <li style="font-family:Italiana;">Contact</li>
+        </a>
+      </ul>
+    </div>
+    <div class="bod">
+      <span>Witness art that <span class="w">l</span><span class="w">i</span><span class="w">v</span><span
+          class="w">e</span><span class="w">s</span></span><br />
+      <!-- <span class="sub">l'art qui vit</span> -->
+    </div>
+
+    <div class="movinglady">
+      <img class="movinglad" src="ffff.png" alt="gif" height="520px" width="500px" />
+  </section>
+
+
+
+
+  <section id="rendu">
+    <span class="thala">Explore the <span class="w" style="padding-left:20px">C</span><span class="w">R</span><span
+        class="w">E</span><span class="w">A</span><span class="w">T</span><span class="w">O</span><span
+        class="w">R</span><span class="w">S</span></span>
+    <br><br>
+
+    <span class="find" style="margin-bottom:50px;">Explore the world of art.....</span>
+
+    <br>
+
+    </div>
+
+    <button id="btn">
+      Find my artist
+    </button>
+    <span class="magic" style="text-align:center"></span>
+    <span class="cont"></span>
+
+
+    <div class="rating">
+      <input value="star-1" name="star-radio" id="star-1" class="star1" type="radio">
+      <label for="star-1">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"></path>
+        </svg>
+      </label>
+      <input value="star-1" name="star-radio" id="star-2" type="radio">
+      <label for="star-2">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"></path>
+        </svg>
+      </label>
+      <input value="star-1" name="star-radio" id="star-3" type="radio">
+      <label for="star-3">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"></path>
+        </svg>
+      </label>
+      <input value="star-1" name="star-radio" id="star-4" type="radio">
+      <label for="star-4">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"></path>
+        </svg>
+      </label>
+      <input value="star-1" name="star-radio" id="star-5" type="radio">
+      <label for="star-5">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            pathLength="360"></path>
+        </svg>
+      </label>
+    </div>
+
+  </section>
+  <section class="hari">
+
+
+
+
+    <div class="card"><img src="./vincentvangogh-vincent-van-gogh-VanGogh-painter-pintor.jpg" class="card-img">
+      <a id="c1" href="#" target="new">
+        <div class="card-body">
+          <h1 class="card-title">Vincent van Gogh</h1>
+          <p class="card-sub-title">(1853-1890)</p>
+          <p class="card-info">Vincent van Gogh, the influential Dutch painter, created emotionally charged artworks,
+            including "The Starry Night," despite struggling with mental health throughout his life.</p>
+
+        </div>
+      </a>
+    </div>
+    <a id="c2" href="#" target="new">
+      <div class="card"><img src="./A-Getty-148277064_oysal9.webp" class="card-img">
+        <div class="card1-body">
+          <h1 class="card1-title">Leonardo da Vinci</h1>
+          <p class="card1-sub-title">(1452-1519)</p>
+          <p class="card1-info">Leonardo da Vinci was a true Renaissance genius, renowned for his mastery in art,
+            science,
+            and invention. His enigmatic smile in the "Mona Lisa" captivates the world even today.</p>
+
+        </div>
+      </div>
+    </a>
+
+    <a id="c3" href="#" target="new">
+      <div class="card"><img src="./Screenshot 2023-07-06 190533.png" class="card-img">
+        <div class="card2-body">
+          <h1 class="card2-title">Pablo Picasso</h1>
+          <p class="card2-sub-title">(1881-1973)</p>
+          <p class="card2-info">Pablo Picasso revolutionized modern art with his innovative styles and techniques,
+            leaving
+            an indelible mark on the art world.</p>
+        </div>
+      </div>
+    </a>
+    <a id="c4" href="#" target="new">
+      <div class="card"><img src="./Screenshot 2023-07-06 194923.png" class="card-img">
+        <div class="card3-body">
+          <h1 class="card3-title">Raja Ravi Varma</h1>
+          <p class="card3-sub-title">(1848-1906)</p>
+          <p class="card3-info">Raja Ravi Varma, an influential Indian painter, blended European academic style with
+            Indian
+            themes, pioneering the popularization of Indian art and bridging cultural aesthetics.</p>
+        </div>
+      </div>
+    </a>
+
+  </section>
+
+  <br><br><br><br><br>
+
+
+
+  <section>
+    <span class="span">
+      <span class="w">R</span><span class="w">E</span><span class="w">V</span><span class="w">I</span><span
+        class="w">E</span><span class="w">W</span>
+    </span>
+    <div class="form" style="margin-top: -5px;">
+
+      <form action="connect.php" method="post" style="color:white;s">
+        <label for="name" id="name">enter your name</label>
+
+        <input type="text" name="name">
+        <br>
+        <label for="review" id="review" value="review">review</label>
+        <br>
+        <textarea name="rev" id="rev" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" style="color:white;font-family:Italiana;width:200px;font-size:30px;">
+
+      </form>
+    </div>
+  </section>
+  <br><br><br><br><br><br><br><br>
+  <hr>
+  <br><br>
+
+
+  <script src="endsem.js"></script>
+
+</body>
+
+</html>
