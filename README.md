@@ -7,6 +7,13 @@ This project is a UI showcase inspired by the elegance and ambiance of fine art 
 > Best viewed with your eyes open and your mind curious.
 
 ---
+## Tech Stack Used
+
+- HTML  
+- CSS  
+- JavaScript  
+
+---
 
 ![login-cum-signup-page](https://github.com/user-attachments/assets/ae6bcfe2-e526-4166-8cd8-d71950e824c5)
 ![first-page](https://github.com/user-attachments/assets/559b1cb9-f159-41a4-8ff6-b5f5a8342c1a)
